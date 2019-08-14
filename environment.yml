@@ -1,10 +1,5 @@
 name: dmenv
 dependencies:
 - python==3.6
-- pip=18
 - matplotlib
 - notebook
-- ipywidgets
-- rise
--pip:
-  - -e .
