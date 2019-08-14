@@ -15,4 +15,16 @@ Once you have activated your virtual environment go to the folder where you kept
 ```bash
 pip install .
 ```
-Once installed, files can be changed and run in python. 
+Once installed, files can be changed and run in python. As an example ,
+```python
+from qiskit import QuantumCircuit
+qc = QuantumCircuit(2)
+# Gates
+qc.x(1)
+qc.cx(0,1)
+# execution
+backend = BasicAer.get_backend('dm_simulator')
+run = execute(qc,backend)
+result = run.result()
+```
+The [jupyter notebook](user_guide.ipynb) provides details example about how to use this simulator.
