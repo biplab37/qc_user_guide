@@ -11,11 +11,12 @@ You can activate/deactivate the virtual enviroment
 conda activate name_of_the_env
 conda deactivate
 ```
-Once you have activated your virtual environment go to the folder where you kept the cloned files. To install the folder type in the terminal
+Once you have activated your virtual environment go to the folder where you kept the cloned files.  
+To install the folder type in the terminal
 ```bash
 pip install .
 ```
-## Example and Tutorials
+## Examples and Tutorials
 Once installed, files can be changed and run in python. As an example ,
 ```python
 from qiskit import QuantumCircuit
@@ -28,4 +29,4 @@ backend = BasicAer.get_backend('dm_simulator')
 run = execute(qc,backend)
 result = run.result()
 ```
-The [jupyter notebook](user_guide.ipynb) provides details example about how to use this simulator.
+The [jupyter notebook](user_guide.ipynb) provide detail examples about how to use this simulator.
