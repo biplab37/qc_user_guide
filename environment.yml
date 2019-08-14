@@ -1,5 +1,7 @@
 name: dmenv
+channels:
+  - conda-forge 
 dependencies:
-- python==3.6
-- matplotlib
-- notebook
+  - python==3.6
+  - matplotlib
+  - notebook
