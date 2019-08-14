@@ -17,16 +17,27 @@ To install the folder type in the terminal
 pip install .
 ```
 ## Examples and Tutorials
-Once installed, files can be changed and run in python. As an example ,
+Once installed, files can be changed and run in python. As an example,
+```bash
+python
+```
 ```python
-from qiskit import QuantumCircuit
-qc = QuantumCircuit(2)
-# Gates
-qc.x(1)
-qc.cx(0,1)
-# execution
-backend = BasicAer.get_backend('dm_simulator')
-run = execute(qc,backend)
-result = run.result()
+>>> from qiskit import QuantumCircuit,BasicAer,execute
+>>> qc = QuantumCircuit(2)
+>>> # Gates
+>>> qc.x(1)
+>>> qc.cx(0,1)
+>>> # execution
+>>> backend = BasicAer.get_backend('dm_simulator')
+>>> run = execute(qc,backend)
+>>> result = run.result()
+>>> print(result['results'][0]['data']['densitymatrix'])
+```
+It would output the resultant densitymatrix as,
+```python
+[[0 0 0 0]
+[0 1 0 0]
+[0 0 0 0]
+[0 0 0 0]]
 ```
 The [jupyter notebook](user_guide.ipynb) provide detail examples about how to use this simulator.
